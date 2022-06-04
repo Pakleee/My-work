@@ -1,0 +1,22 @@
+
+<div th:fragment="header">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Кошачий сервер</span>
+      </a>
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item "><a href="/" class="nav-link " aria-current="page">Главная</a></li>
+        <li class="nav-item "><a href="/product" class="nav-link ">Продукты</a></li>
+        <li class="nav-item"><a href="/basket" class="nav-link ">Корзина</a></li>
+        <li class="nav-item"><a href="/photo" class="nav-link ">Фото кота</a></li>
+        <li class="nav-item"><a href="/manager" class="nav-link ">Страничка менеджера</a></li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="Поиск" placeholder="Поиск" aria-label="Поиск">
+        <button class="btn btn-outline-success" type="submit">Поиск</button>
+      </form>
+    </header>
+
+</div>
