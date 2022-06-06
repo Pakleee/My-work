@@ -69,6 +69,9 @@ public class ManagerController {
 
     @PostMapping("/product/{id}/edit")
     public String managerPostEdit(@PathVariable(value = "id") long id, @RequestParam String name, @RequestParam String state, @RequestParam String category, @RequestParam double price, @RequestParam double discount, Model model) {
+        if (!postRepository.existsById(id)) {
+            return "redirect:/product";
+        }
         Post post = postRepository.findById(id).orElseThrow();
         post.setName(name);
         post.setPrice(price);

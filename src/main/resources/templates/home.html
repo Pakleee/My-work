@@ -8,6 +8,11 @@
 <body>
 <header th:insert="blocks/header :: header"></header>
 
-<p th:text="'Привет, ' + ${title} + '!'"/>
+<p th:text="'Добро пожаловать на, ' + ${title} + '!'"/><br>
+<div>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Авторизация"/>
+    </form>
+</div>
 </body>
 </html>
