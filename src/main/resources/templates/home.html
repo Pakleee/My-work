@@ -7,12 +7,18 @@
 </head>
 <body>
 <header th:insert="blocks/header :: header"></header>
+<figure class="text-center">
+    <blockquote class="blockquote">
+    <p th:text="'Добро пожаловать на ' + ${title} + '!'" /><br>
 
-<p th:text="'Добро пожаловать на, ' + ${title} + '!'"/><br>
 <div>
     <form th:action="@{/logout}" method="post">
-        <input type="submit" value="Авторизация"/>
+        <input type="submit" value="Авторизация" class="btn btn-success"/>
     </form>
+
 </div>
+    </blockquote>
+    </figcaption>
+</figure>
 </body>
 </html>

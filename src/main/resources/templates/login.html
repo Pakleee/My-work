@@ -8,18 +8,24 @@
 </head>
 <body>
 <header th:insert="blocks/header :: header"></header>
+<figure class="text-center">
+    <blockquote class="blockquote">
 <div th:if="${param.error}">
     Не верное имя пользователя или пароль.
 </div>
 <div th:if="${param.logout}">
     Войти в аккаунт.
-</div>
-Авторизация!
+</div><br>
 <form th:action="@{/login}" method="post">
-    <div><label> Имя пользователя : <input type="text" name="username"/> </label></div>
-    <div><label> Пароль: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Войти"/></div>
+    <div><label> Имя пользователя : <input type="text" name="username" class="form-control"/> </label></div>
+    <div><label> Пароль: <input type="password" name="password" class="form-control"/> </label></div><br>
+    <div><input type="submit" value="Войти" class="btn btn-success"/></div><br>
 </form>
-<a href="/registration"> Добавить пользователя</a>
+    </blockquote>
+    </figcaption>
+</figure>
+<a href="/registration"> Добавить пользователя</a><br>
+<p><a href="./">На главную</a></p>
 </body>
 </html>
+

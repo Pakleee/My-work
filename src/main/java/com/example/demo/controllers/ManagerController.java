@@ -26,6 +26,7 @@ public class ManagerController {
 
     @GetMapping("/manager/add")
     public String managerAdd(Model model) {
+
         return "manager-add";
     }
 

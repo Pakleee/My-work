@@ -15,7 +15,6 @@
         <h3 th:text="${el.name}"/>
         <p th:text="'Цена: '+${el.price}+'р'"/>
         <p th:text="'Скидка: '+${el.discount}+'%'"/><br>
-
         <a th:href="'/product/'+${el.id}">Подробнее </a><br>
         <a th:href="'/basket/'+${el.id}+'/add'">Добавить в корзину. </a><br>
     </div>

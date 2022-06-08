@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Информация о пользователе </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+
+<div class="container mt-5">
+    <h1>Информация о пользователе</h1>
+
+    <div th:each="eu : ${user}" class="alert alert-info mt-2">
+        <h3 th:text="'Логин: '+${eu.username}"/>
+        <p th:text="'Пароль: '+${eu.password}"/>
+        <p th:text="'Почта: '+${eu.email}"/>
+        <p th:text="'возраст: '+${eu.age}"/>
+        <p th:text="'ID: '+${eu.id}"/>
+        <p th:text="'Активность: '+${eu.active}"/>
+
+
+        <a th:href="'/user/'+${eu.id}+'/edit'" class="btn btn-warning">Редактировать </a><br><br>
+        <form th:action="'/user/'+${eu.id}+'/remove'" method="post">
+            <button class="btn btn-warning" type="submit">Удалить пользователя из БД </button>
+        </form>
+
+    </div>
+    <p><a href="/user">Назад</a></p>
+</div>
+</body>
+</html>
