@@ -12,10 +12,11 @@
     <h1> Редактирование профиля.</h1>
     <div th:each="eu : ${user}">
         <form  method="post">
-            <input type="text" th:value="${eu.username}" id="username" name="username" class="form-control" placeholder="Введите логин."><br>
-            <input type="text" th:value="${eu.password}" id="password" name="password" class="form-control" placeholder="Введите пароль."><br>
-            <input type="text" th:value="${eu.email}" id="email" name="email" class="form-control" placeholder="Введите почту."><br>
-            <input type="text" th:value="${eu.age}" id="age" name="age" class="form-control" placeholder="Введите возраст."><br>
+            <input type="text" th:value="${eu.username}" id="username" name="username" class="form-control" placeholder="Введите логин." required><br>
+            <input type="text" th:value="${eu.password}" id="password" name="password" class="form-control" placeholder="Введите пароль." required><br>
+            <input type="text" th:value="${eu.email}" id="email" name="email" class="form-control" placeholder="Введите почту." required><br>
+            <input type="text" th:value="${eu.age}" id="age" name="age" class="form-control" placeholder="Введите возраст." required><br>
+            <input type="text" th:value="${eu.roles}" id="roles" name="roles" class="form-control" placeholder="Введите roles." required><br>
 
             <button type="submit" class="btn btn-success"> Изменить</button>
         </form>

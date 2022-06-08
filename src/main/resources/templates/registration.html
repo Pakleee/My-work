@@ -12,11 +12,11 @@
   <blockquote class="blockquote">
 Добавить пользователя.
 <form th:action="@{/registration}" method="post" >
-  <div><label> Имя пользователя : <input type="text" name="username" class="form-control"/> </label></div>
-  <div><label> Пароль:<input type="password" name="password" class="form-control"/> </label></div>
-  <div><label> Email: <input type="text" name="email" class="form-control"/> </label></div>
-  <div><label> Возраст: <input type="text" name="age" class="form-control"/> </label></div><br>
-  <div><input type="submit" value="Добавить" class="btn btn-success"/></div>
+  <div><label> Имя пользователя : <input type="text" name="username" class="form-control" required/> </label></div>
+  <div><label> Пароль:<input type="password" name="password" class="form-control" required/> </label></div>
+  <div><label> Email: <input type="text" name="email" class="form-control" required/> </label></div>
+  <div><label> Возраст: <input type="text" name="age" class="form-control" required/> </label></div><br>
+  <div><input type="submit" value="Добавить" class="btn btn-success" required/></div>
   </div>
 </form>
   </blockquote>

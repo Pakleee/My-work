@@ -12,11 +12,11 @@
     <h1> Редактирование товара.</h1>
     <div th:each="el : ${post}">
     <form  method="post">
-        <input type="text" th:value="${el.name}" id="name" name="name" class="form-control" placeholder="Введите имя."><br>
-        <input type="text" th:value="${el.price}" id="price" name="price" class="form-control" placeholder="Введите цену."><br>
-        <input type="text" th:value="${el.category}" id="category" name="category" class="form-control" placeholder="Введите категорию."><br>
-        <input type="text" th:value="${el.state}" id="state" name="state" class="form-control" placeholder="Введите статус."><br>
-        <input type="text" th:value="${el.discount}" id="discount" name="discount" class="form-control" placeholder="Введите скидку."><br>
+        <input type="text" th:value="${el.name}" id="name" name="name" class="form-control" placeholder="Введите имя." required><br>
+        <input type="text" th:value="${el.price}" id="price" name="price" class="form-control" placeholder="Введите цену." required><br>
+        <input type="text" th:value="${el.category}" id="category" name="category" class="form-control" placeholder="Введите категорию." required><br>
+        <input type="text" th:value="${el.state}" id="state" name="state" class="form-control" placeholder="Введите статус." required><br>
+        <input type="text" th:value="${el.discount}" id="discount" name="discount" class="form-control" placeholder="Введите скидку." required><br>
 
         <button type="submit" class="btn btn-success"> Изменить</button>
     </form>

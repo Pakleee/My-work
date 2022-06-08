@@ -17,8 +17,8 @@
     Войти в аккаунт.
 </div><br>
 <form th:action="@{/login}" method="post">
-    <div><label> Имя пользователя : <input type="text" name="username" class="form-control"/> </label></div>
-    <div><label> Пароль: <input type="password" name="password" class="form-control"/> </label></div><br>
+    <div><label> Имя пользователя : <input type="text" name="username" class="form-control" required/> </label></div>
+    <div><label> Пароль: <input type="password" name="password" class="form-control" required/> </label></div><br>
     <div><input type="submit" value="Войти" class="btn btn-success"/></div><br>
 </form>
     </blockquote>

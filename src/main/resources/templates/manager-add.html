@@ -12,15 +12,15 @@
   <h1>Добавление продуктов.</h1>
   <form action="/manager/add" method="post">
     <label  for="name">Название продукта:</label><br>
-    <input  type="text" id="name" name="name" class="form-control"><br>
+    <input  type="text" id="name" name="name" class="form-control" required><br>
     <label for="price">Цена продукта:</label><br>
-    <input type="text" id="price" name="price" class="form-control"><br>
+    <input type="text" id="price" name="price" class="form-control" required><br>
     <label for="category">Категория продукта:</label><br>
-    <input type="text" id="category" name="category" class="form-control"><br>
+    <input type="text" id="category" name="category" class="form-control" required><br>
     <label for="state">Статус продукта:</label><br>
-    <input type="text" id="state" name="state" class="form-control"><br>
+    <input type="text" id="state" name="state" class="form-control" required><br>
     <label for="discount">Скидка продукта:</label><br>
-    <input type="text" id="discount" name="discount" class="form-control"><br>
+    <input type="text" id="discount" name="discount" class="form-control" required><br>
 
     <button type="submit" class="btn btn-success"> Добавить товар</button>
   </form>

@@ -13,7 +13,7 @@
         <li class="nav-item"><a href="/photo" class="nav-link ">Фото кота</a></li>
         <li class="nav-item"><a href="/manager" class="nav-link ">Страничка менеджера</a></li>
       </ul>
-      <form class="d-flex" role="search">
+      <form  th:method="get" th:action="@{/product}" class="d-flex" role="search">
         <input class="form-control me-2" type="text" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>

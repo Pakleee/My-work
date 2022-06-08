@@ -1,4 +1,4 @@
-package com.example.demo.models;
+package com.example.demo.entity;
 
 
 import javax.persistence.*;
@@ -66,11 +66,13 @@ public class User {
         this.active = active;
     }
 
+
     public Set<Role> getRoles() {
         return roles;
     }
 
     public void setRoles(Set<Role> roles) {
+
         this.roles = roles;
     }
 
